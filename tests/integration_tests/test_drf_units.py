@@ -309,7 +309,7 @@ def test_locale_standardization_parity(
         assert response.json()["standardQuantity"] == expected_quantity
 
 
-def test_dispatcher_routes_units_only(monkeypatch: pytest.MonkeyPatch, unique_user: TestUser) -> None:
+def test_dispatcher_routes_units_and_foods(monkeypatch: pytest.MonkeyPatch, unique_user: TestUser) -> None:
     calls: list[str] = []
     django_target = application.django_app
     fastapi_target = application.fastapi_app
@@ -329,7 +329,7 @@ def test_dispatcher_routes_units_only(monkeypatch: pytest.MonkeyPatch, unique_us
         ("/api/units", "django"),
         (f"/api/units/{uuid4()}", "django"),
         ("/api/units/merge", "django"),
-        ("/api/foods", "fastapi"),
+        ("/api/foods", "django"),
         ("/api/organizers/tags", "fastapi"),
         ("/api/users/self", "fastapi"),
         ("/api/recipes", "fastapi"),

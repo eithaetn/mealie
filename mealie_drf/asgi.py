@@ -22,7 +22,7 @@ if not get_app_settings().PRODUCTION:
 # URL imports require Django setup to have completed.
 from mealie_drf.urls import HEALTH_PATH  # noqa: E402
 
-PORTED_HTTP_PREFIXES: tuple[str, ...] = ("/api/units",)
+PORTED_HTTP_PREFIXES: tuple[str, ...] = ("/api/units", "/api/foods")
 
 application = ASGIDispatcher(
     fastapi_app,
