@@ -63,7 +63,7 @@ def test_drf_health() -> None:
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
     assert response.headers["content-type"] == "application/json"
-    assert PORTED_HTTP_PREFIXES == ()
+    assert PORTED_HTTP_PREFIXES == ("/api/units",)
     assert "django.contrib.auth" not in settings.INSTALLED_APPS
     assert "django.contrib.sessions" not in settings.INSTALLED_APPS
     assert settings.DATABASES["default"]["ENGINE"] == "django.db.backends.dummy"
