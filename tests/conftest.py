@@ -65,7 +65,12 @@ def override_get_db():
 def api_client():
     app.dependency_overrides[generate_session] = override_get_db
 
-    yield TestClient(app)
+    if os.environ.get("MEALIE_TEST_USE_DISPATCHER") == "1":
+        from mealie_drf.asgi import application
+
+        yield TestClient(application)
+    else:
+        yield TestClient(app)
 
     with contextlib.suppress(Exception):
         settings = config.get_app_settings()

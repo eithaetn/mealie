@@ -46,6 +46,9 @@ dependencies = [
     "ingredient-parser-nlp==2.8.0",
     "pint==0.26.1",
     "httpx-curl-cffi==0.1.5",
+    "django==6.1.1",
+    "djangorestframework==3.18.1",
+    "drf-spectacular==0.30.0",
 ]
 
 [project.scripts]
