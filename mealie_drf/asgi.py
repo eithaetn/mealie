@@ -6,9 +6,11 @@ from starlette.middleware.cors import CORSMiddleware
 from mealie.app import app as fastapi_app
 from mealie.core.config import get_app_settings
 from mealie_drf.dispatcher import ASGIDispatcher
+from mealie_drf.tags.middleware import TagErrorHeaders, TagHTTPMiddleware
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mealie_drf.settings")
 django_app = get_asgi_application()
+django_app = TagHTTPMiddleware(django_app)
 if not get_app_settings().PRODUCTION:
     # Match FastAPI's development CORS policy for the migrated boundary.
     django_app = CORSMiddleware(
@@ -19,10 +21,12 @@ if not get_app_settings().PRODUCTION:
         allow_headers=["*"],
     )
 
+django_app = TagErrorHeaders(django_app)
+
 # URL imports require Django setup to have completed.
 from mealie_drf.urls import HEALTH_PATH  # noqa: E402
 
-PORTED_HTTP_PREFIXES: tuple[str, ...] = ("/api/units", "/api/foods")
+PORTED_HTTP_PREFIXES: tuple[str, ...] = ("/api/units", "/api/foods", "/api/organizers/tags")
 
 application = ASGIDispatcher(
     fastapi_app,
