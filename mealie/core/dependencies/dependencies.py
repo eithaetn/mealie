@@ -14,10 +14,11 @@ from sqlalchemy.orm.session import Session
 
 from mealie.core import root_logger
 from mealie.core.config import get_app_dirs, get_app_settings
+from mealie.core.security.authentication import AuthenticationError, TokenVerifier
 from mealie.core.security.tokens import ALGORITHM
 from mealie.db.db_setup import generate_session
 from mealie.repos.all_repositories import get_repositories
-from mealie.schema.user import PrivateUser, TokenData
+from mealie.schema.user import PrivateUser
 from mealie.schema.user.user import DEFAULT_INTEGRATION_ID, GroupInDB
 
 oauth2_scheme_soft_fail = OAuth2PasswordBearer(tokenUrl="/api/auth/token", auto_error=False)
@@ -104,38 +105,9 @@ async def get_current_user(
     session=Depends(generate_session),
 ) -> PrivateUser:
     try:
-        payload = jwt.decode(token, settings.SECRET, algorithms=[ALGORITHM])
-        user_id: str | None = payload.get("sub")
-        long_token: str | None = payload.get("long_token")
-
-        if long_token is not None:
-            return validate_long_live_token(session, token, payload.get("id"))
-
-        if user_id is None:
-            raise credentials_exception
-
-        token_data = TokenData(user_id=user_id)
-    except PyJWTError as e:
-        raise credentials_exception from e
-
-    repos = get_repositories(session, group_id=None, household_id=None)
-
-    user = repos.users.get_one(token_data.user_id, "id", any_case=False)
-
-    # If we don't commit here, lazy-loads from user relationships will leave some table lock in postgres
-    # which can cause quite a bit of pain further down the line
-    session.commit()
-    if user is None:
-        raise credentials_exception
-
-    # A password change invalidates everything issued before it. Tokens minted before `iat` existed
-    # carry no issue time, and since they necessarily predate any password change, they fail closed.
-    if user.tokens_valid_after is not None:
-        issued_at = payload.get("iat")
-        if issued_at is None or issued_at < user.tokens_valid_after.timestamp():
-            raise credentials_exception
-
-    return user
+        return TokenVerifier(session, get_repositories).resolve(token)
+    except AuthenticationError as exc:
+        raise HTTPException(exc.status_code, exc.detail, headers=exc.headers) from exc
 
 
 async def get_integration_id(token: str = Depends(get_auth_token)) -> str:
@@ -157,22 +129,10 @@ async def get_admin_user(current_user: PrivateUser = Depends(get_current_user)) 
 
 
 def validate_long_live_token(session: Session, client_token: str, user_id: str) -> PrivateUser:
-    repos = get_repositories(session, group_id=None, household_id=None)
-
-    token = repos.api_tokens.multi_query({"token": client_token, "user_id": user_id})
-
     try:
-        user = token[0].user
-        # Match get_current_user(): end the read transaction opened during auth
-        # immediately, otherwise long-lived/API-token auth can hold a DB
-        # connection idle-in-transaction until request teardown. Browsers/PWAs
-        # and automation issuing many concurrent requests can then exhaust
-        # SQLAlchemy's connection pool.
-        session.commit()
-        return user
-    except IndexError as e:
-        session.rollback()
-        raise HTTPException(status.HTTP_401_UNAUTHORIZED) from e
+        return TokenVerifier(session, get_repositories).validate_api_token(client_token, user_id)
+    except AuthenticationError as exc:
+        raise HTTPException(exc.status_code, exc.detail, headers=exc.headers) from exc
 
 
 def validate_file_token(token: str | None = None) -> Path:
