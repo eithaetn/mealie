@@ -10,6 +10,15 @@ from mealie.drf.auth_views import (
     OAuthNativeTokenView,
     RefreshView,
 )
+from mealie.drf.group_views import (
+    GroupHouseholdsView,
+    GroupHouseholdView,
+    GroupMembersView,
+    GroupMemberView,
+    GroupPreferencesView,
+    GroupSelfView,
+    GroupStorageView,
+)
 from mealie.drf.image_views import ProfileImageView
 from mealie.drf.rating_views import FavoritesView, FavoriteView, RatingsView, RatingView
 from mealie.drf.registration_views import ForgotPasswordView, RegistrationView, ResetPasswordView
@@ -28,6 +37,13 @@ from mealie.drf.views import AppInfoView, AppStartupInfoView, AppThemeView
 handler500 = "mealie.drf.errors.server_error"
 
 urlpatterns = [
+    path("api/groups/members", GroupMembersView.as_view()),
+    path("api/groups/members/<str:username_or_id>", GroupMemberView.as_view()),
+    path("api/groups/households", GroupHouseholdsView.as_view()),
+    path("api/groups/households/<str:household_slug>", GroupHouseholdView.as_view()),
+    path("api/groups/self", GroupSelfView.as_view()),
+    path("api/groups/preferences", GroupPreferencesView.as_view()),
+    path("api/groups/storage", GroupStorageView.as_view()),
     path("api/users/<uuid:id>/image", ProfileImageView.as_view()),
     path("api/users/<uuid:id>/ratings", RatingsView.as_view()),
     path("api/users/<uuid:id>/favorites", FavoritesView.as_view()),
