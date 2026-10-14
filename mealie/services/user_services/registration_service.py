@@ -4,6 +4,7 @@ from uuid import uuid4
 from fastapi import HTTPException, status
 from pydantic import UUID4
 
+from mealie.core.api_error import APIError
 from mealie.core.config import get_app_settings
 from mealie.core.security import hash_password
 from mealie.lang.providers import Translator
@@ -12,8 +13,11 @@ from mealie.repos.repository_factory import AllRepositories
 from mealie.schema.group.group_preferences import CreateGroupPreferences
 from mealie.schema.household.household import HouseholdCreate, HouseholdInDB
 from mealie.schema.household.household_preferences import CreateHouseholdPreferences
+from mealie.schema.response import ErrorResponse
 from mealie.schema.user.registration import CreateUserRegistration
-from mealie.schema.user.user import GroupBase, GroupInDB, PrivateUser, UserIn
+from mealie.schema.user.user import GroupBase, GroupInDB, PrivateUser, UserIn, UserOut
+from mealie.services.event_bus_service.event_bus_service import EventBusService
+from mealie.services.event_bus_service.event_types import EventTypes, EventUserSignupData
 from mealie.services.group_services.group_service import GroupService
 from mealie.services.household_services.household_service import HouseholdService
 from mealie.services.seeder.seeder_service import SeederService
@@ -27,6 +31,19 @@ class RegistrationService:
         self.logger = logger
         self.repos = db
         self.t = translator.t
+
+    def register_public_user(self, registration: CreateUserRegistration, event_bus: EventBusService) -> UserOut:
+        if (not get_app_settings().ALLOW_SIGNUP and registration.group_token is None) or registration.group_token == "":
+            raise APIError(403, ErrorResponse.respond("User Registration is Disabled"))
+        user = self.register_user(registration)
+        event_bus.dispatch(
+            integration_id="registration",
+            group_id=user.group_id,
+            household_id=user.household_id,
+            event_type=EventTypes.user_signup,
+            document_data=EventUserSignupData(username=user.username, email=user.email),
+        )
+        return UserOut.model_validate(user.model_dump())
 
     def _create_new_user(self, group: GroupInDB, household: HouseholdInDB, new_group: bool) -> PrivateUser:
         new_user = UserIn(

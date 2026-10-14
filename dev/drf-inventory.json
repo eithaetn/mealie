@@ -1,0 +1,2367 @@
+{
+  "note": "DRF owns the listed supported operations. Legacy declarations still provide OpenAPI and fallback routing.",
+  "counts": {
+    "drf": 48,
+    "fastapi": 218
+  },
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/api/app/about",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/app/about/startup-info",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/app/about/theme",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/token",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/oauth",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/oauth/callback",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/oauth/native/config",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/oauth/native/token",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/register",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/self",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/self/ratings",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/self/ratings/{recipe_id}",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/self/favorites",
+      "framework": "drf"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/users/password",
+      "framework": "drf"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/users/{item_id}",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/forgot-password",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/reset-password",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/{id}/image",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/api-tokens",
+      "framework": "drf"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/users/api-tokens/{token_id}",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/{id}/ratings",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/{id}/favorites",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/{id}/ratings/{slug}",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/{id}/favorites/{slug}",
+      "framework": "drf"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/users/{id}/favorites/{slug}",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/cookbooks",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/cookbooks",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/cookbooks",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/cookbooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/cookbooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/cookbooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/events/notifications",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/events/notifications",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/events/notifications/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/events/notifications/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/events/notifications/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/events/notifications/{item_id}/test",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/recipe-actions",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/recipe-actions",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/recipe-actions/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/recipe-actions/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/recipe-actions/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/recipe-actions/{item_id}/trigger/{recipe_slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/self",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/self/recipes/{recipe_slug}",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/members",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/preferences",
+      "framework": "drf"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/preferences",
+      "framework": "drf"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/permissions",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/statistics",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/invitations",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/invitations",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/invitations/email",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/shopping/lists",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/shopping/lists",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/shopping/lists/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/shopping/lists/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/shopping/lists/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/shopping/lists/{item_id}/label-settings",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/shopping/lists/{item_id}/recipe",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}/delete",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/shopping/items",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/shopping/items",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/shopping/items",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/shopping/items",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/shopping/items/create-bulk",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/shopping/items/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/shopping/items/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/shopping/items/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/webhooks",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/webhooks",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/webhooks/rerun",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/webhooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/webhooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/webhooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/webhooks/{item_id}/test",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/mealplans/rules",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/mealplans/rules",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/mealplans/rules/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/mealplans/rules/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/mealplans/rules/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/mealplans",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/mealplans",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/mealplans/today",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/households/mealplans/random",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/households/mealplans/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/households/mealplans/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/households/mealplans/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/ai-providers/providers",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/ai-providers/providers/test",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/ai-providers/providers/{provider_id}/test",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/ai-providers/providers/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/groups/ai-providers/providers/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/groups/ai-providers/providers/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/ai-providers/settings",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/groups/ai-providers/settings",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/households",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/households/{household_slug}",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/self",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/members",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/members/{username_or_id}",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/preferences",
+      "framework": "drf"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/groups/preferences",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/storage",
+      "framework": "drf"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/migrations",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/reports",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/reports/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/groups/reports/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/labels",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/labels",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/groups/labels/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/groups/labels/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/groups/labels/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/seeders/foods",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/groups/seeders/units",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/exports",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/{slug}/exports",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/test-scrape-url",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/html-or-json",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/html-or-json/stream",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/url",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/url/stream",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/ai",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/ai/stream",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/url/bulk",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/create/zip",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/suggestions",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/{slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/recipes/{slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/recipes/{slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/recipes/{slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/{slug}/duplicate",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/recipes/{slug}/last-made",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/{slug}/image",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/recipes/{slug}/image",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/recipes/{slug}/image",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/{slug}/assets",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/{slug}/assets/url",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/{slug}/comments",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/bulk-actions/tag",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/bulk-actions/settings",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/bulk-actions/categorize",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/bulk-actions/delete",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/bulk-actions/export",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/bulk-actions/export",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/bulk-actions/export/{export_id}/download",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/recipes/bulk-actions/export/purge",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/shared/{token_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/shared/{token_id}/zip",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/timeline/events",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/recipes/timeline/events",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/recipes/timeline/events/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/recipes/timeline/events/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/recipes/timeline/events/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/recipes/timeline/events/{item_id}/image",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/categories",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/organizers/categories",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/categories/empty",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/organizers/categories/merge",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/categories/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/organizers/categories/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/organizers/categories/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/categories/slug/{category_slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tags",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/organizers/tags",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tags/empty",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/organizers/tags/merge",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tags/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/organizers/tags/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/organizers/tags/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tags/slug/{tag_slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tools",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/organizers/tools",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tools/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/organizers/tools/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/organizers/tools/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/organizers/tools/slug/{tool_slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/shared/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/shared/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/shared/recipes/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/shared/recipes/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/comments",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/comments",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/comments/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/comments/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/comments/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/parser/ingredient",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/parser/ingredients",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/foods",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/foods",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/foods/merge",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/foods/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/foods/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/foods/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/units",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/units",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/units/merge",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/units/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/units/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/units/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/about",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/about/statistics",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/about/check",
+      "framework": "drf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/unlock",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/users/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/users/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/password-reset-token",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/households",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/households",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/households/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/households/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/households/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/groups",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/groups",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/groups/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/groups/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/groups/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/groups/{group_id}/ai-providers/providers",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/groups/{group_id}/ai-providers/providers/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/groups/{group_id}/ai-providers/providers/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/groups/{group_id}/ai-providers/providers/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/email",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/email",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/backups",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/backups",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/backups/{file_name}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/admin/backups/{file_name}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/backups/upload",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/backups/{file_name}/restore",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/maintenance",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/maintenance/storage",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/maintenance/clean/images",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/maintenance/clean/temp",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/maintenance/clean/recipe-folders",
+      "framework": "fastapi"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/debug/openai/{provider_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/foods",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/foods/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/households",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/households/{household_slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/organizers/categories",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/organizers/categories/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/organizers/tags",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/organizers/tags/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/organizers/tools",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/organizers/tools/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/cookbooks",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/cookbooks/{item_id}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/recipes",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/recipes/suggestions",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/explore/groups/{group_slug}/recipes/{recipe_slug}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/recipes/{recipe_id}/images/{file_name}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/recipes/{recipe_id}/images/timeline/{timeline_event_id}/{file_name}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/recipes/{recipe_id}/assets/{file_name}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/users/{user_id}/{file_name}",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/docker/validate.txt",
+      "framework": "fastapi"
+    },
+    {
+      "method": "GET",
+      "path": "/api/utils/download",
+      "framework": "fastapi"
+    }
+  ],
+  "fastapi_imports": [
+    {
+      "file": "mealie/app.py",
+      "line": 14,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/app.py",
+      "line": 15,
+      "module": "fastapi.middleware.cors"
+    },
+    {
+      "file": "mealie/app.py",
+      "line": 16,
+      "module": "fastapi.middleware.gzip"
+    },
+    {
+      "file": "mealie/app.py",
+      "line": 17,
+      "module": "fastapi.routing"
+    },
+    {
+      "file": "mealie/core/dependencies/dependencies.py",
+      "line": 8,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/core/dependencies/dependencies.py",
+      "line": 10,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/core/dependencies/dependencies.py",
+      "line": 11,
+      "module": "fastapi.security"
+    },
+    {
+      "file": "mealie/drf/base.py",
+      "line": 7,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "mealie/drf/base.py",
+      "line": 8,
+      "module": "fastapi.exceptions"
+    },
+    {
+      "file": "mealie/drf/image_views.py",
+      "line": 3,
+      "module": "fastapi.exceptions"
+    },
+    {
+      "file": "mealie/drf/pagination.py",
+      "line": 3,
+      "module": "fastapi.exceptions"
+    },
+    {
+      "file": "mealie/lang/providers.py",
+      "line": 7,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/repos/_recipe_suggestions.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/repos/repository_ai_provider.py",
+      "line": 2,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/repos/repository_cookbooks.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/repos/repository_generic.py",
+      "line": 9,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/_base/base_controllers.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/_base/checks.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/_base/controller.py",
+      "line": 11,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/_base/controller.py",
+      "line": 12,
+      "module": "fastapi.routing"
+    },
+    {
+      "file": "mealie/routes/_base/mixins.py",
+      "line": 6,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/_base/routers.py",
+      "line": 7,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/_base/routers.py",
+      "line": 8,
+      "module": "fastapi.routing"
+    },
+    {
+      "file": "mealie/routes/admin/admin_about.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_backups.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_debug.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_email.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_maintenance.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_management_ai_providers.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_management_groups.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_management_households.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/admin/admin_management_users.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/app/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/app/app_about.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/auth/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/auth/auth.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/auth/auth.py",
+      "line": 5,
+      "module": "fastapi.exceptions"
+    },
+    {
+      "file": "mealie/routes/comments/__init__.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/explore/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/explore/controller_public_cookbooks.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/explore/controller_public_foods.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/explore/controller_public_households.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/explore/controller_public_organizers.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/explore/controller_public_recipes.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_group_ai_providers.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_group_households.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_group_reports.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_group_self_service.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_labels.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_migrations.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/groups/controller_migrations.py",
+      "line": 4,
+      "module": "fastapi.datastructures"
+    },
+    {
+      "file": "mealie/routes/groups/controller_seeder.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/handlers.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/handlers.py",
+      "line": 2,
+      "module": "fastapi.exceptions"
+    },
+    {
+      "file": "mealie/routes/handlers.py",
+      "line": 3,
+      "module": "fastapi.responses"
+    },
+    {
+      "file": "mealie/routes/households/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_cookbooks.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_group_notifications.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_group_recipe_actions.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_group_recipe_actions.py",
+      "line": 4,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "mealie/routes/households/controller_household_self_service.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_invitations.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_mealplan.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_mealplan_rules.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_shopping_lists.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/households/controller_webhooks.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/media/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/media/__init__.py",
+      "line": 2,
+      "module": "fastapi.responses"
+    },
+    {
+      "file": "mealie/routes/media/media_recipe.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/media/media_user.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/organizers/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/organizers/controller_categories.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/organizers/controller_tags.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/organizers/controller_tools.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/parser/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/parser/ingredient_parser.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/recipe/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/recipe/_base.py",
+      "line": 3,
+      "module": "fastapi.responses"
+    },
+    {
+      "file": "mealie/routes/recipe/bulk_actions.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/recipe/recipe_crud_routes.py",
+      "line": 13,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/recipe/recipe_crud_routes.py",
+      "line": 24,
+      "module": "fastapi.datastructures"
+    },
+    {
+      "file": "mealie/routes/recipe/recipe_crud_routes.py",
+      "line": 25,
+      "module": "fastapi.sse"
+    },
+    {
+      "file": "mealie/routes/recipe/shared_routes.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/recipe/timeline_events.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/shared/__init__.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/spa/__init__.py",
+      "line": 8,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/spa/__init__.py",
+      "line": 9,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "mealie/routes/spa/__init__.py",
+      "line": 10,
+      "module": "fastapi.staticfiles"
+    },
+    {
+      "file": "mealie/routes/spa/manifest.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/unit_and_foods/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/unit_and_foods/foods.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/unit_and_foods/units.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/_helpers.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/api_tokens.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/crud.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/forgot_password.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/images.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/ratings.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/users/registration.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/utility_routes.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/validators/__init__.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/routes/validators/validators.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/schema/make_dependable.py",
+      "line": 3,
+      "module": "fastapi.exceptions"
+    },
+    {
+      "file": "mealie/schema/user/auth.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/backups_v2/alchemy_exporter.py",
+      "line": 11,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "mealie/services/event_bus_service/event_bus_listeners.py",
+      "line": 8,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "mealie/services/event_bus_service/event_bus_service.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/event_bus_service/publisher.py",
+      "line": 3,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "mealie/services/query_filter/builder.py",
+      "line": 11,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/recipe/ai_recipe_service.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/recipe/recipe_service.py",
+      "line": 14,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/scraper/scraper.py",
+      "line": 6,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/scraper/scraper_strategies.py",
+      "line": 8,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/user_services/password_reset_service.py",
+      "line": 1,
+      "module": "fastapi"
+    },
+    {
+      "file": "mealie/services/user_services/registration_service.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/conftest.py",
+      "line": 44,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/drf/test_app_contract.py",
+      "line": 7,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/fixtures/fixture_multitenant.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/admin_tests/test_admin_about.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/admin_tests/test_admin_ai_providers.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/admin_tests/test_admin_backup.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/admin_tests/test_admin_group_actions.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/admin_tests/test_admin_household_actions.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/admin_tests/test_admin_user_actions.py",
+      "line": 3,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/category_tag_tool_tests/test_organizers_common.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/category_tag_tool_tests/test_organizers_merge.py",
+      "line": 8,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/public_explorer_tests/test_public_cookbooks.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/public_explorer_tests/test_public_foods.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/public_explorer_tests/test_public_households.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/public_explorer_tests/test_public_organizers.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/public_explorer_tests/test_public_recipes.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/recipe_migration_tests/test_recipe_migrations.py",
+      "line": 11,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_groups.py",
+      "line": 5,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_groups.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_households.py",
+      "line": 6,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_households.py",
+      "line": 7,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_oidc.py",
+      "line": 8,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_oidc.py",
+      "line": 9,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_registration.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_security.py",
+      "line": 6,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/integration_tests/test_drf_security.py",
+      "line": 7,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_openapi.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/test_validators.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_group_tests/test_group_ai_providers.py",
+      "line": 7,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_group_tests/test_group_preferences.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_group_tests/test_group_registration.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_group_tests/test_group_seeder.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_group_tests/test_group_self_service.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_cookbooks.py",
+      "line": 7,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_invitation.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_mealplan.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_mealplan_rules.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_notifications.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_recipe_actions.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_shopping_list_items.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_shopping_lists.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_group_webhooks.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_household_perferences.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_household_permissions.py",
+      "line": 3,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_household_self_service.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_organize_permissions.py",
+      "line": 8,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_household_tests/test_shopping_list_labels.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_asset_from_url.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_bulk_action.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_bulk_import.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_comments.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_create_from_ai.py",
+      "line": 7,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_create_from_openai.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_create_from_video.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_cross_household.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_crud.py",
+      "line": 13,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_export_as.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_foods.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_image_assets.py",
+      "line": 3,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_owner.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_ratings.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_share_tokens.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_steps.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_substitutions.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_suggestions.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_timeline_events.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_recipe_tests/test_recipe_units.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_oidc_native.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_user_api_token.py",
+      "line": 3,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_user_crud.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_user_images.py",
+      "line": 1,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_user_login.py",
+      "line": 6,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_user_password_services.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/integration_tests/user_tests/test_user_registration.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/multitenant_tests/case_abc.py",
+      "line": 3,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/multitenant_tests/case_abc.py",
+      "line": 4,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/multitenant_tests/test_multitenant_cases.py",
+      "line": 2,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/unit_tests/core/test_dependencies.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/unit_tests/repository_tests/test_pagination.py",
+      "line": 11,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/unit_tests/services_tests/scheduler/tasks/test_create_timeline_events.py",
+      "line": 5,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "tests/unit_tests/test_token_security.py",
+      "line": 6,
+      "module": "fastapi"
+    },
+    {
+      "file": "tests/utils/jsonify.py",
+      "line": 1,
+      "module": "fastapi.encoders"
+    },
+    {
+      "file": "tests/utils/user_login.py",
+      "line": 3,
+      "module": "fastapi.testclient"
+    },
+    {
+      "file": "dev/code-generation/gen_py_pytest_routes.py",
+      "line": 4,
+      "module": "fastapi"
+    },
+    {
+      "file": "dev/code-generation/utils/open_api_parser.py",
+      "line": 6,
+      "module": "fastapi"
+    }
+  ],
+  "runtime_and_build": [
+    "mealie/app.py",
+    "pyproject.toml",
+    "uv.lock",
+    "dev/code-generation"
+  ],
+  "outside_openapi": [
+    "FastAPI startup/shutdown and documentation routes in mealie/app.py",
+    "Production SPA/static mounting and three HTML/manifest routes in mealie/routes/spa/__init__.py",
+    "FastAPI import smoke checks in .github/workflows/test-backend.yml and locale-sync.yml"
+  ]
+}

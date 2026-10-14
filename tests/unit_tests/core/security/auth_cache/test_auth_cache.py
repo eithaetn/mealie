@@ -87,7 +87,7 @@ async def test_expiration_with_default_timeout(cache: AuthCache):
     await cache.set(key, value)
     assert await cache.has(key) is True
 
-    with patch("mealie.routes.auth.auth_cache.time") as mock_time:
+    with patch("mealie.core.security.auth_cache.time") as mock_time:
         current_time = time.time()
         expired_time = current_time + cache.default_timeout + 1
         mock_time.time.return_value = expired_time

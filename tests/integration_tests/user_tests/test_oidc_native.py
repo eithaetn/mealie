@@ -4,7 +4,7 @@ from joserfc.errors import InvalidClaimError
 from pytest import MonkeyPatch
 
 from mealie.app import app
-from mealie.routes.auth import auth as auth_routes
+from mealie.services import oidc_service as auth_routes
 from tests.utils import api_routes
 
 native_token_request = {

@@ -13,6 +13,8 @@ dependencies = [
     "alembic==1.20.0",
     "apprise==2.0.0",
     "bcrypt==5.0.0",
+    "Django==5.2.17",
+    "djangorestframework==3.18.1",
     "extruct==0.18.0",
     "fastapi==0.142.0",
     "httpx==0.28.1",

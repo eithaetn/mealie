@@ -1,11 +1,11 @@
 import json
-import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import pytest
 from pydantic import ValidationError
+from sqlalchemy.engine import make_url
 
 from mealie.core.config import get_app_settings
 from mealie.core.settings.settings import AppSettings, determine_secrets
@@ -57,7 +57,12 @@ def test_default_connection_args(monkeypatch):
     monkeypatch.setenv("DB_ENGINE", "sqlite")
     get_app_settings.cache_clear()
     app_settings = get_app_settings()
-    assert re.match(r"sqlite:////.*mealie*.db", app_settings.DB_URL)
+    url = make_url(app_settings.DB_URL)
+    assert url.drivername == "sqlite"
+    assert url.database is not None
+    path = Path(url.database)
+    assert path.is_absolute()
+    assert path.name == "mealie.db"
 
 
 def test_pg_connection_args(monkeypatch):
