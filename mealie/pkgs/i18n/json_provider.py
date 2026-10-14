@@ -10,7 +10,7 @@ class JsonProvider:
 
     def __init__(self, path: Path | dict):
         if isinstance(path, Path):
-            self.translations = json.loads(path.read_text())
+            self.translations = json.loads(path.read_text(encoding="utf-8"))
         else:
             self.translations = path
 

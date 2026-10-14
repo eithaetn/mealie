@@ -1,4 +1,3 @@
-import tempfile
 from pathlib import Path
 from uuid import UUID
 
@@ -9,7 +8,7 @@ from tests.utils.factories import random_int, random_string
 from tests.utils.fixture_schemas import TestUser
 
 
-def test_purge_group_exports(unique_user: TestUser):
+def test_purge_group_exports(unique_user: TestUser, tmp_path: Path):
     database = unique_user.repos
 
     # create the export
@@ -29,8 +28,7 @@ def test_purge_group_exports(unique_user: TestUser):
         for _ in range(random_int(2, 5))
     ]
 
-    with tempfile.NamedTemporaryFile() as tmpfile:
-        recipe_exporter.export_recipes(Path(tmpfile.name), [recipe.slug for recipe in recipes])
+    recipe_exporter.export_recipes(tmp_path / "recipes.zip", [recipe.slug for recipe in recipes])
 
     exports = recipe_exporter.get_exports()
     assert len(exports) == 1

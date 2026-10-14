@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from mealie.pkgs.i18n import JsonProvider, ProviderFactory
 from tests.data import locale_dir
 
@@ -7,6 +10,17 @@ def test_json_provider():
 
     assert provider.t("test") == "test"
     assert provider.t("test2", "DEFAULT") == "DEFAULT"
+
+
+def test_json_provider_reads_utf8_translations(tmp_path: Path) -> None:
+    translations = {"french": "Recette cr\u00e9\u00e9e", "japanese": "\u30ec\u30b7\u30d4"}
+    path = tmp_path / "translations.json"
+    path.write_text(json.dumps(translations, ensure_ascii=False), encoding="utf-8")
+
+    provider = JsonProvider(path)
+
+    for key, expected in translations.items():
+        assert provider.t(key) == expected
 
 
 def test_json_provider_plural():

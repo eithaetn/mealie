@@ -40,7 +40,7 @@ test_cleaner_data = [
 @pytest.mark.parametrize("json_file,num_steps", test_cleaner_data)
 def test_cleaner_clean(json_file: Path, num_steps):
     translator = get_locale_provider()
-    recipe_data = cleaner.clean(json.loads(json_file.read_text()), translator)
+    recipe_data = cleaner.clean(json.loads(json_file.read_text(encoding="utf-8")), translator)
     assert len(recipe_data.recipe_instructions or []) == num_steps
 
 
@@ -51,7 +51,7 @@ def test_html_with_recipe_data():
 
     open_graph_strategy = RecipeScraperOpenGraph(url, translator, None)  # type: ignore[arg-type]
 
-    recipe_data = open_graph_strategy.get_recipe_fields(path.read_text())
+    recipe_data = open_graph_strategy.get_recipe_fields(path.read_text(encoding="utf-8"))
 
     assert len(recipe_data["name"]) > 10
     assert len(recipe_data["slug"]) > 10

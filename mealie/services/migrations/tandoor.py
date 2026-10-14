@@ -104,7 +104,7 @@ class TandoorMigrator(BaseMigrator):
                     except StopIteration as e:
                         raise Exception("recipe.json not found") from e
 
-                    with open(recipe_json_path) as f:
+                    with open(recipe_json_path, encoding="utf-8") as f:
                         recipes_as_dicts.append(self._process_recipe_document(recipe_source_dir, json.load(f)))
 
                 except Exception as e:

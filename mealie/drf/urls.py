@@ -19,7 +19,16 @@ from mealie.drf.group_views import (
     GroupSelfView,
     GroupStorageView,
 )
+from mealie.drf.household_views import (
+    HouseholdMembersView,
+    HouseholdPermissionsView,
+    HouseholdPreferencesView,
+    HouseholdRecipeView,
+    HouseholdSelfView,
+    HouseholdStatisticsView,
+)
 from mealie.drf.image_views import ProfileImageView
+from mealie.drf.invitation_views import InvitationEmailView, InvitationsView
 from mealie.drf.rating_views import FavoritesView, FavoriteView, RatingsView, RatingView
 from mealie.drf.registration_views import ForgotPasswordView, RegistrationView, ResetPasswordView
 from mealie.drf.user_views import (
@@ -37,6 +46,14 @@ from mealie.drf.views import AppInfoView, AppStartupInfoView, AppThemeView
 handler500 = "mealie.drf.errors.server_error"
 
 urlpatterns = [
+    path("api/households/invitations", InvitationsView.as_view()),
+    path("api/households/invitations/email", InvitationEmailView.as_view()),
+    path("api/households/self", HouseholdSelfView.as_view()),
+    path("api/households/self/recipes/<str:recipe_slug>", HouseholdRecipeView.as_view()),
+    path("api/households/members", HouseholdMembersView.as_view()),
+    path("api/households/preferences", HouseholdPreferencesView.as_view()),
+    path("api/households/permissions", HouseholdPermissionsView.as_view()),
+    path("api/households/statistics", HouseholdStatisticsView.as_view()),
     path("api/groups/members", GroupMembersView.as_view()),
     path("api/groups/members/<str:username_or_id>", GroupMemberView.as_view()),
     path("api/groups/households", GroupHouseholdsView.as_view()),

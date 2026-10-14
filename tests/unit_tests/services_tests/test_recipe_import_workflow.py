@@ -53,7 +53,7 @@ def keys_in_source(pattern: re.Pattern) -> list[str]:
 
     keys: set[str] = set()
     for path in MEALIE_DIR.rglob("*.py"):
-        keys.update(pattern.findall(path.read_text()))
+        keys.update(pattern.findall(path.read_text(encoding="utf-8")))
 
     return sorted(keys)
 
